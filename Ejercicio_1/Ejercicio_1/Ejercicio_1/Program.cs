@@ -80,7 +80,7 @@
                     else 
                     {
                         Console.WriteLine("Has Ganado");
-                        finalizado = true;
+                        finalizado = false;
                     }
                     if (finalizado) 
                     { 
