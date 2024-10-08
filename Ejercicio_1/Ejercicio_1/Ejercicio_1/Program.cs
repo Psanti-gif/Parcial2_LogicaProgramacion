@@ -4,13 +4,18 @@
     {
         int opcion;
         bool continuar = true;
-        int MaxNum = 0;
-        Random random = new Random();
-        int num = random.Next(0, MaxNum + 1);
+        
         
 
         do
         {
+            Console.Clear();
+            int MaxNum = 0;
+            int numero_J = 0;
+            Random random = new Random();
+            int num = 0;
+            
+
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("Seleccione la cantidad de jugadores que desean jugar: ");
             Console.WriteLine("Presiona 1, Para 2 Jugadores ");
@@ -29,6 +34,7 @@
 
                 case 1:
                     MaxNum = 50;
+                    numero_J = 2;
                     num = random.Next(0, MaxNum + 1);
                     Console.WriteLine("Has seleccionado la opcion de 2 Jugadores:");
                     Console.WriteLine("A continuación se ha generado un número entre 0 y 50: ");
@@ -36,16 +42,18 @@
 
                 case 2:
                     MaxNum = 100;
+                    numero_J = 3;
                     num = random.Next(0, MaxNum + 1);
-                    Console.WriteLine("Has seleccionado la opcion de 2 Jugadores:");
-                    Console.WriteLine("Se ha generado un número entre 0 y 50: ");
+                    Console.WriteLine("Has seleccionado la opcion de 3 Jugadores:");
+                    Console.WriteLine("Se ha generado un número entre 0 y 100: ");
                     break;
 
                 case 3:
                     MaxNum = 200;
+                    numero_J = 4;
                     num = random.Next(0, MaxNum + 1);
-                    Console.WriteLine("Has seleccionado la opcion de 2 Jugadores:");
-                    Console.WriteLine("Se ha generado un número entre 0 y 50: ");
+                    Console.WriteLine("Has seleccionado la opcion de 4 Jugadores:");
+                    Console.WriteLine("Se ha generado un número entre 0 y 200: ");
                     break;
 
                 default:
@@ -54,7 +62,10 @@
                     break;
 
             }
-
+            if (continuar && numero_J > 1)
+            {
+                bool finalizado = false
+            }
 
         } while (continuar);
 
