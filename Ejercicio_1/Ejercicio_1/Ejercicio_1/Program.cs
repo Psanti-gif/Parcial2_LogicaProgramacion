@@ -36,6 +36,7 @@
                     num = random.Next(0, MaxNum + 1);
                     Console.WriteLine("Has seleccionado la opcion de 2 Jugadores:");
                     Console.WriteLine("A continuación se ha generado un número entre 0 y 50: ");
+                    Console.WriteLine("");
                     break;
 
                 case 2:
@@ -44,6 +45,7 @@
                     num = random.Next(0, MaxNum + 1);
                     Console.WriteLine("Has seleccionado la opcion de 3 Jugadores:");
                     Console.WriteLine("Se ha generado un número entre 0 y 100: ");
+                    Console.WriteLine("");
                     break;
 
                 case 3:
@@ -52,6 +54,7 @@
                     num = random.Next(0, MaxNum + 1);
                     Console.WriteLine("Has seleccionado la opcion de 4 Jugadores:");
                     Console.WriteLine("Se ha generado un número entre 0 y 200: ");
+                    Console.WriteLine("");
                     break;
 
                 default:
@@ -67,19 +70,27 @@
                 while (finalizado)
                 {
                     Console.WriteLine($"Turno del jugador: {turno}");
-                    Console.WriteLine("Ingresa el número que crees que es:");
+                    Console.Write("Ingresa el número que crees que es: ");
                     int intento = int.Parse(Console.ReadLine());
                     if (intento > num)
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("MENOR");
+                        Console.WriteLine("");
+                        Console.WriteLine("");
                     }
                     else if (intento < num)
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("MAYOR");
+                        Console.WriteLine("");
+                        Console.WriteLine("");
                     }
                     else 
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("Has Ganado");
+                        Console.WriteLine("");
                         finalizado = false;
                     }
                     if (finalizado) 
@@ -89,6 +100,7 @@
                 }
 
                 Console.WriteLine("¿Desean jugar de nuevo? (S/N)");
+                Console.WriteLine("");
                 string respuesta = Console.ReadLine().ToUpper();
                 if (respuesta == "N")
                 {
