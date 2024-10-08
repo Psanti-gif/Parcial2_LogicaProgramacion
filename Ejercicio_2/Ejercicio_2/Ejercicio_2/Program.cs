@@ -27,9 +27,21 @@
 
             if (promedio >= 4.5)
             {
-                Console.WriteLine($"El estudiante {nombre} esta en la categoria Excelente");
+                Console.WriteLine($"El estudiante {nombre} esta en la categoria: \nExcelente");
             }
+            else if (promedio >= 4.0 && promedio <= 4.4)
+            {
+                Console.WriteLine($"El estudiante {nombre} esta en la categoria: \nSobresaliente");
+            }
+            else if(promedio >= 3.5 && promedio <= 3.9)
+            {
+                Console.WriteLine($"El estudiante {nombre} esta en la categoria: \nBueno");
 
+            }
+            else
+            {
+                Console.WriteLine($"El estudiante {nombre} esta en la categoria de: \nInsuficiente");
+            }
 
         } while (continuar);
     }
