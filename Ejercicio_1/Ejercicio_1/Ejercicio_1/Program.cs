@@ -3,9 +3,7 @@
     private static void Main(string[] args)
     {
         int opcion;
-        bool continuar = true;
-        
-        
+        bool continuar = true;       
 
         do
         {
@@ -64,8 +62,26 @@
             }
             if (continuar && numero_J > 1)
             {
-                bool finalizado = false
-            }
+                bool finalizado = true;
+                int turno = 1;
+                while (finalizado)
+                {
+                    Console.WriteLine($"Turno del jugador: {turno}");
+                    Console.WriteLine("Ingresa el número que crees que es:");
+                    int intento = int.Parse(Console.ReadLine());
+                    if (intento > num)
+                    {
+                        Console.WriteLine("MENOR");
+                    }
+                    else if (intento < num)
+                    {
+                        Console.WriteLine("MAYOR");
+                    }
+                    else 
+                    {
+                        Console.WriteLine("Has Ganado");
+                    }
+                }
 
         } while (continuar);
 
