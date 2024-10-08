@@ -80,9 +80,21 @@
                     else 
                     {
                         Console.WriteLine("Has Ganado");
+                        finalizado = true;
                     }
+                    if (finalizado) 
+                    { 
+                        turno = (turno % numero_J) + 1;
+                    } 
                 }
 
+                Console.WriteLine("¿Desean jugar de nuevo? (S/N)");
+                string respuesta = Console.ReadLine().ToUpper();
+                if (respuesta == "N")
+                {
+                    continuar = false;
+                }
+            }
         } while (continuar);
 
     }
